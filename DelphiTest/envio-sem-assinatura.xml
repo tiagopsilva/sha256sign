@@ -1,0 +1,66 @@
+<eSocial xmlns="http://www.esocial.gov.br/schema/lote/eventos/envio/v1_1_1">
+    <envioLoteEventos grupo="1">
+        <ideEmpregador>
+            <tpInsc>1</tpInsc>
+            <nrInsc>12345678</nrInsc>
+        </ideEmpregador>
+        <ideTransmissor>
+            <tpInsc>1</tpInsc>
+            <nrInsc>12345678901234</nrInsc>
+        </ideTransmissor>
+        <eventos>
+            <evento Id="ID1234567890123456789012345678901234">
+                <eSocial xmlns="http://www.esocial.gov.br/schema/evt/evtInfoEmpregador/v02_04_01">
+                    <evtInfoEmpregador Id="ID1234567890123456789012345678901234">
+                        <ideEvento>
+                            <tpAmb>2</tpAmb>
+                            <procEmi>1</procEmi>
+                            <verProc>1.0</verProc>
+                        </ideEvento>
+                        <ideEmpregador>
+                            <tpInsc>1</tpInsc>
+                            <nrInsc>12345678</nrInsc>
+                        </ideEmpregador>
+                        <infoEmpregador>
+                            <inclusao>
+                                <idePeriodo>
+                                    <iniValid>2017-12</iniValid>
+                                </idePeriodo>
+                                <infoCadastro>
+                                    <nmRazao>RAZAO SOCIAL DA EMPRESA</nmRazao>
+                                    <classTrib>99</classTrib>
+                                    <natJurid>2062</natJurid>
+                                    <indCoop>0</indCoop>
+                                    <indConstr>1</indConstr>
+                                    <indDesFolha>0</indDesFolha>
+                                    <indOptRegEletron>1</indOptRegEletron>
+                                    <indEntEd>S</indEntEd>
+                                    <indEtt>N</indEtt>
+                                    <contato>
+                                        <nmCtt>NOME PARA CONTATO 1</nmCtt>
+                                        <cpfCtt>11111111111</cpfCtt>
+                                        <foneFixo>1133333333</foneFixo>
+                                        <foneCel>11999999999</foneCel>
+                                        <email>email@provedor.com.br</email>
+                                    </contato>
+                                    <softwareHouse>
+                                        <cnpjSoftHouse>11111111111111</cnpjSoftHouse>
+                                        <nmRazao>RAZAO SOCIAL DA SOFTWARE HOUSE</nmRazao>
+                                        <nmCont>NOME PARA CONTATO DA SOFTWARE HOUSE</nmCont>
+                                        <telefone>1133334444</telefone>
+                                        <email>software@house.com.br</email>
+                                    </softwareHouse>
+                                    <infoComplementares>
+                                        <situacaoPJ>
+                                            <indSitPJ>4</indSitPJ>
+                                        </situacaoPJ>
+                                    </infoComplementares>
+                                </infoCadastro>
+                            </inclusao>
+                        </infoEmpregador>
+                    </evtInfoEmpregador>
+                </eSocial>
+            </evento>
+        </eventos>
+    </envioLoteEventos>
+</eSocial>
