@@ -11,6 +11,9 @@ uses
   Classes,
   {$ifend }
   Windows,
+  ActiveX,
+  UntCertificados in 'UntCertificados.pas',
+  ACBrCAPICOM_TLB in 'ACBrCAPICOM_TLB.pas',
   sha256sign in '..\sha256sign.pas';
 
 var
@@ -27,18 +30,18 @@ begin
       // Obtem os valores de SerialNumber e PIN do certificado pelas variáveis de ambiente previamente configuradas.
       // Para realizar seu teste você pode cadastrar essas variáveis com os valores do seu certificado ou mudar essas
       // linhas colocando os valores diretamente.
-      CertTokenA3SerialNumber := GetEnvironmentVariable('CERT_TOKEN_A3_SERIAL_NUMBER');
+      CertTokenA3SerialNumber := GetEnvironmentVariable('CERT_TOKEN_A3_SERIAL_NUMBER2');
       CertTokenA3Pin := GetEnvironmentVariable('CERT_TOKEN_A3_PIN');
 
-      // se o serial number não for encontrado nas variáveis de ambiente, será pedido para que seja informado
+      // se o SerialNumber não for encontrado nas variáveis de ambiente, será então exibida uma lista dos certificados
+      // instalados e disponíveis para o teste
       if Trim(CertTokenA3SerialNumber) = '' then
       begin
-        Write('Informe o Número Serial do Certificado: ');
-        Readln(CertTokenA3SerialNumber);
+        CertTokenA3SerialNumber := TCertificados.SelecionarCertificado;
       end;
 
       directory := ExtractFilePath(ParamStr(0));
-      fileName := directory + 'teste_' + FormatDateTime('yyyyMMdd-hhmmss', now) + '.xml';      
+      fileName := directory + 'teste_' + FormatDateTime('yyyyMMdd-hhmmss', now) + '.xml';
       CopyFile(PChar(directory + 'envio-sem-assinatura.xml'), PChar(fileName), false);
 
       TSha256Sign.Sign(fileName, 'evtInfoEmpregador', CertTokenA3SerialNumber, CertTokenA3Pin);

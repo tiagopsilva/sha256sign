@@ -24,3 +24,6 @@ packages
 *.~*
 *.dcu
 *.ddp
+/DelphiTest/*.local
+/DelphiTest/*.identcache
+/DelphiTest/*.xml

@@ -43,8 +43,7 @@ begin
       {$WARNINGS ON}
       except
         on e: Exception do
-          raise Exception.Create('Erro ao executar sha256sign.dll!' + #13 +
-            'Technical Message: ' + e.Message);
+          raise Exception.Create('Erro ao executar sha256sign.dll!' + #13 + 'Technical Message: ' + e.Message);
       end;
     end
     else
