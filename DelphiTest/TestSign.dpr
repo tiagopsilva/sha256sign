@@ -30,7 +30,7 @@ begin
       // Obtem os valores de SerialNumber e PIN do certificado pelas variáveis de ambiente previamente configuradas.
       // Para realizar seu teste você pode cadastrar essas variáveis com os valores do seu certificado ou mudar essas
       // linhas colocando os valores diretamente.
-      CertTokenA3SerialNumber := GetEnvironmentVariable('CERT_TOKEN_A3_SERIAL_NUMBER2');
+      CertTokenA3SerialNumber := GetEnvironmentVariable('CERT_TOKEN_A3_SERIAL_NUMBER');
       CertTokenA3Pin := GetEnvironmentVariable('CERT_TOKEN_A3_PIN');
 
       // se o SerialNumber não for encontrado nas variáveis de ambiente, será então exibida uma lista dos certificados
