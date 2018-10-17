@@ -7,7 +7,7 @@ DLL para assinatura de XML´s usando o algoritmo SHA256 e com Certificado A3.
 Essa é uma pequena alteração da **[eSocialSignature](https://github.com/tiagopsilva/eSocialSignature)** para torná-la possível de ser usada em mais de um tipo de software/processo (como o Reinf), obedecendo somente a um requisito para o eSocial que diz que o atributo **URI** da tag **Reference** deve estar vazio, para as outras não.
 
 - DLL escrita em C# para ser usada como uma DLL comum, ou seja, como escrita em C;
-- Escrita em .NET 4.0 para compatibilidade com Windows XP;
+- ~Escrita em .NET 4.0 para compatibilidade com Windows XP;~
 - Baseada na **[CertFly](https://github.com/leivio/CertFly)**;
 
 ## Como usar
